@@ -1,19 +1,42 @@
+@use '../../styles/partials/colors' as *;
+
 .header {
-    
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
 
     &__logo {
+        height: 1.56rem;
+        width: 7.5rem;
+        align-self: center;
+    }
 
+    &__feature {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
     }
 
     &__search {
-
+        border-radius: 4px;
+        height: 2rem;
+        width: 80%;
+        border: 2px solid $secondary-background;
+        background-color: $form-field;
     }
 
     &__upload {
-
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        border: none;
+        background-color: $main-highlight;
+        color: $primary;
 
         &__icon {
-
+            
         }
     }
 

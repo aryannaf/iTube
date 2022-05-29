@@ -1,4 +1,5 @@
 import '../Header/Header.scss';
+import '../../styles/global.scss';
 import logo from '../../assets/images/BrainFlix-logo.svg';
 import searchIcon from '../../assets/images/search.svg';
 import uploadIcon from '../../assets/images/upload.svg';

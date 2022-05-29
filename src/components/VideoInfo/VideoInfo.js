@@ -5,16 +5,21 @@ import views from '../../assets/images/views.svg';
 import likes from '../../assets/images/likes.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import commentIcon from '../../assets/images/add_comment.svg';
+import playButton from '../../assets/images/play.svg';
+import scrub from '../../assets/images/scrub.svg';
+import fullscreen from '../../assets/images/fullscreen.svg';
+import volume from '../../assets/images/volume_up.svg';
 
 export default function VideoInfo({ video }) {
 
 
     return (
         <section className="video">
-            <img className="video__display"
-                src={video.image}
-                alt="two people riding bikes"
-            />
+            <video className="video__display"
+                poster={video.image}
+            >
+                <source src={video.video}></source>
+            </video>
             <h1>{video.title}</h1>
             <div>
                 <div>
@@ -39,7 +44,7 @@ export default function VideoInfo({ video }) {
                 </div>
             </div>
             <p>{video.description}</p>
-            <h6>Comments</h6>
+            <h6>{video.comments.length} Comments</h6>
             <div>
                 <img className="video__comment__avatar" src={avatar} alt="profile picture" />
                 <div>
@@ -72,7 +77,7 @@ export default function VideoInfo({ video }) {
                             </div>
                         </div>
                     );
-                })};
+                })}
             </div>
         </section>
     )

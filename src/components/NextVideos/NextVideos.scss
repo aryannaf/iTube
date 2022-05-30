@@ -1,1 +1,52 @@
 @use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.next-videos {
+    margin: 1rem;
+    color: $secondary-highlight;
+
+    &__title {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    &__video-list {
+        
+    }
+
+    &__video {
+        display: flex;
+        height: 4rem;
+        margin-bottom: 1rem;
+    }
+    
+    &__thumbnail {
+        border-radius: 4px;
+        width: 5rem;
+
+        @include tablet {
+            width: 7rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        justify-content: space-between;
+        width: 12rem;
+    }
+
+    &__video-title {
+        margin: 0;
+        font-size: .81rem;
+        color: $main-text;
+    }
+
+    &__channel {
+        font-size: .81rem;
+        margin-bottom: .2rem;
+        color: $main-text;
+    }
+}

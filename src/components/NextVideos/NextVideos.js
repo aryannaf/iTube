@@ -9,22 +9,22 @@ export default function NextVideos(props) {
     });
 
     return (
-        <section>
-            <h3>NEXT VIDEOS</h3>
-            <div>
+        <section className="next-videos">
+            <h3 className="next-videos__title">NEXT VIDEOS</h3>
+            <div className="next-videos__video-list">
                 {nextVideos.map((nextVideo) => {
                     return (
-                        <div
+                        <div className="next-videos__video"
                             key={nextVideo.id}
                             onClick={() => {props.clickHandler(nextVideo.id)}}
                         >
-                            <img className=""
+                            <img className="next-videos__thumbnail"
                                 src={nextVideo.image}
-                                alt=""
+                                alt="video thumbnail"
                             />
-                            <div>
-                                <h6>{nextVideo.title}</h6>
-                                <p>{nextVideo.channel}</p>
+                            <div className="next-videos__info">
+                                <h6 className="next-videos__video-title">{nextVideo.title}</h6>
+                                <p className="next-videos__channel">{nextVideo.channel}</p>
                             </div>
                         </div>
                     );

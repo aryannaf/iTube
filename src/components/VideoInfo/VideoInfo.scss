@@ -1,5 +1,6 @@
 @use '../../styles/global.scss' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
 
 .video {
 
@@ -75,12 +76,21 @@
 
     &__info {
         display: flex;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
+        border-top: 1px solid $secondary-highlight;
+        border-bottom: 1px solid $secondary-highlight;
+
+        @include tablet {
+            border-top: none;
+            justify-content: space-between;
+        }
     }
 
     &__details {
-        
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            width: 13rem;
+        }
     }
 
     &__channel {
@@ -100,6 +110,10 @@
         flex-direction: column;
         justify-content: space-between;
         margin: 1rem 0;
+
+        @include tablet {
+            flex-direction: row;
+        }
     }
 
     &__stat {
@@ -142,7 +156,7 @@
         }
 
         &__details {
-
+            
         }
 
         &__title {

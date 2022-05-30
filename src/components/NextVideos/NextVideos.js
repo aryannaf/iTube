@@ -6,7 +6,7 @@ export default function NextVideos(props) {
 
     const nextVideos = props.nextVideos.filter((nextVideo) => {
         return nextVideo.id !== props.currentVideo.id;
-    })
+    });
 
     return (
         <section>

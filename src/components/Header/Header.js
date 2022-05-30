@@ -10,26 +10,32 @@ export default function Header() {
 
     return (
         <header className="header">
-            <img className="header__logo"
-                src={logo}
-                alt="BrainFlix Logo"
-            />
-            <div className="header__feature">
-                <input className="header__search"
-                    type="text"
-                    placeholder="Search"
+            <div className="header__features">
+                <img className="header__logo"
+                    src={logo}
+                    alt="BrainFlix Logo"
                 />
+                <div className="header__search-bar">
+                    <input className="header__search"
+                        type="text"
+                        placeholder="Search"
+                    />
+                    <img className="header__search-icon"
+                        src={searchIcon}
+                        alt="search"
+                    />
+                </div>
                 <img className="header__avatar"
                     src={avatar}
                     alt="profile picture"
                 />
+                <button className="header__upload">
+                    <img className="header__upload__icon"
+                        src={uploadIcon}
+                        alt="upload icon"
+                    />
+                    UPLOAD</button>
             </div>
-            <button className="header__upload">
-                <img className="header__upload__icon"
-                    src={uploadIcon}
-                    alt="upload icon"
-                />
-                UPLOAD</button>
         </header>
     )
 }

@@ -1,13 +1,242 @@
 @use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
 
 .video {
 
-    &__comment {
+    &__display {
+        position: relative;
+        width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__controls {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 1rem;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__control {
+        background-color: rgba(0,0,0,0.5);
+        padding: .25rem .5rem;
+        height: .5rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+
+        &--scrub {
+            width: 75%;
+            margin: 0 .25rem;
+        }
+    }
+
+    &__play {
+        width: .5rem;
+    }
+
+    &__fullscreen {
+        width: 1rem;
+        margin-right: .75rem;
+    }
+
+    &__volume {
+        width: 1rem;
+    }   
+
+    &__scrub-bar {
+        width: 73%;
+        height: .1rem;
+        background-color: $detail-background;
+        border-radius: 4px;
+    }
+
+    &__duration {
+        margin: 0;
+        font-size: .5rem;
+        margin-left: .5rem;
+        color: $primary;
+    }
+
+    &__info-section {
+        margin: 1rem;
+    }
+
+    &__title {
+        font-weight: 700;
+        color: $main-text;
+    }
+
+    &__info {
+        display: flex;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+
+    &__details {
+        
+    }
+
+    &__channel {
+        color: $main-text;
+        font-size: .81rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    &__date {
+        color: $secondary-highlight;
+        font-size: .81rem;
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+
+    &__stat {
+        display: flex;
+    }
+
+    &__stat-icon {
+        margin-right: .5rem;
+        margin-left: 4rem;
+    }
+
+    &__stat-count {
+        color: $secondary-highlight;
+        font-size: .81rem;
+        margin: 0;
+    }
+
+    &__description {
+        font-size: .81rem;
+    }
+
+    &__comment-count {
+        font-size: .81rem;
+        margin-bottom: 0;
+        color: $main-text;
+        margin-top: 1.5rem;
+    }
+
+    &__comment-form {
+        display: flex;
+        margin-top: .5rem;
+        justify-content: center;
 
         &__avatar {
             width: 2.25rem;
             height: 2.25rem;
             border-radius: 50%;
+            margin-right: 1rem;
+            margin-top: 2.25rem;
+        }
+
+        &__details {
+
+        }
+
+        &__title {
+            font-size: .81rem;
+            font-weight: 700;
+            margin-bottom: .25rem;
+            color: $secondary-highlight;
+        }
+
+        &__input {
+            box-sizing: border-box;
+            width: 100%;
+            height: 6rem;
+            padding: .75rem;
+            border-radius: 4px;
+            background-color: $form-field;
+            margin-bottom: .5rem;
+            border-color: $secondary-background;
+            font-size: .81rem;
+
+            &::placeholder {
+                color: $main-text;
+            }
+        }
+
+        &__submit {
+            width: 100%;
+            background-color: $main-highlight;
+            color: $primary;
+            font-weight: 700;
+            font-size: .81rem;
+            border-radius: 4px;
+            border: none;
+            height: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+
+            &:hover {
+                background-color: $button-highlight;
+            }
+        }
+
+        &__comment-icon {
+            position: absolute;
+            left: .75rem;
+            top: .6rem;
+        }
+    }
+
+    &__comments {
+
+    }
+
+    &__comment {
+        border-bottom: 1px solid $secondary-background;
+        display: flex;
+        padding-top: 1rem;
+
+        &:first-child {
+            border-top: 1px solid $secondary-background;
+        }
+
+        &__avatar {
+            background-color: $secondary-background;
+            border-radius: 50%;
+            width: 2.25rem;
+            height: 2.25rem;
+            margin-right: 1rem;
+        }
+
+        &__info {
+            width: 80%;
+        }
+
+        &__details {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__name {
+            font-size: .81rem;
+            margin: 0;
+            color: $main-text;
+        }
+
+        &__date {
+            margin-top: 0;
+            color: $secondary-highlight;
+            font-size: .81rem;
+        }
+
+        &__content {
+            font-size: .81rem;
+            margin-top: 0;
         }
     }
 }

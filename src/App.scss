@@ -1,3 +1,14 @@
+@use './styles/partials/mixins' as *;
+
+
+.main-container {
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+
 .App {
   text-align: center;
 }

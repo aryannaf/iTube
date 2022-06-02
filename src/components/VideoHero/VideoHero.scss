@@ -1,0 +1,67 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.video {
+
+    &__display {
+        position: relative;
+        width: 100%;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__controls {
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 1rem;
+        justify-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__control {
+        background-color: rgba(0,0,0,0.5);
+        padding: .25rem .5rem;
+        height: .5rem;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+
+        &--scrub {
+            width: 75%;
+            margin: 0 .25rem;
+        }
+    }
+
+    &__play {
+        width: .5rem;
+    }
+
+    &__fullscreen {
+        width: 1rem;
+        margin-right: .75rem;
+    }
+
+    &__volume {
+        width: 1rem;
+    }   
+
+    &__scrub-bar {
+        width: 73%;
+        height: .1rem;
+        background-color: $detail-background;
+        border-radius: 4px;
+    }
+
+    &__duration {
+        margin: 0;
+        font-size: .5rem;
+        margin-left: .5rem;
+        color: $primary;
+    }
+}

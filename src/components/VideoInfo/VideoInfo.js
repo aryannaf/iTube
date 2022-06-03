@@ -9,6 +9,28 @@ import commentIcon from '../../assets/images/add_comment.svg';
 
 export default function VideoInfo({ video }) {
 
+    const formatDate = (date) => {
+        // Change format of date to mm/dd/yyyy
+        let today = new Date(date);
+
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1;
+        let yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = "0" + dd;
+        };
+
+        if (mm < 10) {
+            mm = "0" + mm;
+        }
+
+        today = mm + "/" + dd + "/" + yyyy;
+
+        let dateType = (today.toString("en-us"));
+        return dateType;
+    }
+
 
     return (
         <section className="video">
@@ -17,7 +39,7 @@ export default function VideoInfo({ video }) {
                 <div className="video__info">
                     <div className="video__details">
                         <h5 className="video__channel">By {video.channel}</h5>
-                        <p className="video__date">{video.timestamp}</p>
+                        <p className="video__date">{formatDate(video.timestamp)}</p>
                     </div>
                     <div className="video__stats">
                         <div className="video__stat">
@@ -61,7 +83,7 @@ export default function VideoInfo({ video }) {
                                 <div className="video__comment__info">
                                     <div className="video__comment__details">
                                         <h6 className="video__comment__name">{comment.name}</h6>
-                                        <p className="video__comment__date">{comment.timestamp}</p>
+                                        <p className="video__comment__date">{formatDate(comment.timestamp)}</p>
                                     </div>
                                     <p className="video__comment__content">{comment.comment}</p>
                                 </div>

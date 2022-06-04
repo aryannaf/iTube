@@ -1,6 +1,7 @@
 import '../NextVideos/NextVideos.scss';
 import '../../styles/global.scss';
 import '../../data/videos.json';
+import { NavLink } from 'react-router-dom';
 
 export default function NextVideos(props) {
 

@@ -11,12 +11,12 @@ import nextVideos from './data/videos.json';
 class App extends Component {
 
 
-  state = {
-    videos,
-    currentVideo: videos[0],
+  // state = {
+  //   videos,
+  //   currentVideo: videos[0],
 
-    nextVideos,
-  };
+  //   nextVideos,
+  // };
 
   handleClick = (id) => {
     let clickedVideo = this.state.videos.find((video) => video.id === id);
@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <VideoHero className="video-hero" video={this.state.currentVideo} />
+        {/* <VideoHero className="video-hero" video={this.state.currentVideo} />
         <section className="main-container">
           <VideoInfo className="video-info" video={this.state.currentVideo} />
           <NextVideos
@@ -39,7 +39,7 @@ class App extends Component {
             clickHandler={this.handleClick}
             currentVideo={this.state.currentVideo}
           />
-        </section>
+        </section> */}
       </div>
     );
   }

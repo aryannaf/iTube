@@ -75,7 +75,6 @@ export default function VideoInfo({ video }) {
                             COMMENT</button>
                     </div>
                 </div>
-                {console.log(video.comments)}
                 <div className="video__comments">
                     {video.comments?.map((comment) => {
                         return (

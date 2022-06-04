@@ -1,6 +1,7 @@
 import './App.scss';
-import { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
 import VideoHero from './components/VideoHero/VideoHero';
 import VideoInfo from './components/VideoInfo/VideoInfo';
 import NextVideos from './components/NextVideos/NextVideos';
@@ -8,7 +9,7 @@ import videos from './data/video-details.json';
 import nextVideos from './data/videos.json';
 
 
-class App extends Component {
+function App() {
 
 
   // state = {
@@ -18,31 +19,26 @@ class App extends Component {
   //   nextVideos,
   // };
 
-  handleClick = (id) => {
-    let clickedVideo = this.state.videos.find((video) => video.id === id);
+  // handleClick = (id) => {
+  //   let clickedVideo = this.state.videos.find((video) => video.id === id);
 
-    this.setState({
-      currentVideo: clickedVideo,
-    });
-  };
+  //   this.setState({
+  //     currentVideo: clickedVideo,
+  //   });
+  // };
 
 
-  render() {
     return (
       <div>
-        <Header />
-        {/* <VideoHero className="video-hero" video={this.state.currentVideo} />
-        <section className="main-container">
-          <VideoInfo className="video-info" video={this.state.currentVideo} />
-          <NextVideos
-            nextVideos={this.state.nextVideos}
-            clickHandler={this.handleClick}
-            currentVideo={this.state.currentVideo}
-          />
-        </section> */}
+        <BrowserRouter>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/video/:videoId" component={Home} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
-  }
 }
 
 export default App;

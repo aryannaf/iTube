@@ -24,11 +24,13 @@ class Home extends Component {
         axios
             .get(`${API_URL}/videos${API_KEY_STRING}`)
             .then((response) => {
+                const videoId = this.props.match.params.videoId || response.data[0].id;
                 this.setState({
-                    videos: response.data,
+                    currentVideo: videoId,
+                    nextVideos: response.data
                 })
 
-                const videoId = this.props.match.params.videoId || response.data[0].id;
+                
 
                 this.getSelectedVideo(videoId);
             })
@@ -63,7 +65,6 @@ class Home extends Component {
                     <VideoInfo className="video-info" video={this.state.currentVideo} />
                     <NextVideos
                         nextVideos={this.state.nextVideos}
-                        clickHandler={this.handleClick}
                         currentVideo={this.state.currentVideo}
                     />
                 </section>

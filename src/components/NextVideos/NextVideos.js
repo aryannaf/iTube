@@ -15,9 +15,9 @@ export default function NextVideos(props) {
             <div className="next-videos__video-list">
                 {nextVideos.map((nextVideo) => {
                     return (
+                        <NavLink to={`/video/${nextVideo.id}`} key={nextVideo.id} >
                         <div className="next-videos__video"
                             key={nextVideo.id}
-                            onClick={() => {props.clickHandler(nextVideo.id)}}
                         >
                             <img className="next-videos__thumbnail"
                                 src={nextVideo.image}
@@ -28,6 +28,7 @@ export default function NextVideos(props) {
                                 <p className="next-videos__channel">{nextVideo.channel}</p>
                             </div>
                         </div>
+                        </NavLink>
                     );
                 })}
             </div>

@@ -59,7 +59,7 @@ export default function VideoInfo({ video }) {
                     </div>
                 </div>
                 <p className="video__description">{video.description}</p>
-                <h6 className="video__comment-count">{video.comments.length} Comments</h6>
+                <h6 className="video__comment-count">{video.comments?.length} Comments</h6>
                 <div className="video__comment-form">
                     <img className="video__comment-form__avatar" src={avatar} alt="profile picture" />
                     <div className="video__comment-form__details">
@@ -75,10 +75,11 @@ export default function VideoInfo({ video }) {
                             COMMENT</button>
                     </div>
                 </div>
+                {console.log(video.comments)}
                 <div className="video__comments">
-                    {video.comments.map((comment) => {
+                    {video.comments?.map((comment) => {
                         return (
-                            <div className="video__comment">
+                            <div className="video__comment" key={comment.id}>
                                 <div className="video__comment__avatar"></div>
                                 <div className="video__comment__info">
                                     <div className="video__comment__details">

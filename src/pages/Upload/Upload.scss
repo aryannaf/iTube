@@ -1,0 +1,95 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.upload {
+    margin: 0 1rem;
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.75rem;
+        color: $main-text;
+    }
+
+    &__form {
+        
+    }
+
+    &__thumbnail-title {
+        font-size: .88rem;
+        color: $secondary-highlight;
+        margin-bottom: .5rem;
+    }
+
+    &__thumbnail-image {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    &__title-prompt {
+        font-size: .88rem;
+        color: $secondary-highlight;
+        margin-bottom: .5rem;
+    }
+
+    &__title-input {
+        height: 2.5rem;
+        width: 100%;
+        border: 1px solid $secondary-background;
+        background-color: $form-field;
+        border-radius: 4px;
+        padding-left: .75rem;
+
+        &::placeholder {
+            color: $main-text;
+        }
+    }
+
+    &__description-title {
+        font-size: .88rem;
+        color: $secondary-highlight;
+        margin-bottom: .5rem;
+    }
+
+    &__description-input {
+        height: 5rem;
+        width: 100%;
+        border: 1px solid $secondary-background;
+        background-color: $form-field;
+        border-radius: 4px;
+        padding-left: .75rem;
+        padding-top: .75rem;
+
+        &::placeholder {
+            color: $main-text;
+        }
+    }
+
+    &__publish {
+        height: 2.5rem;
+        width: 100%;
+        background-color: $main-highlight;
+        border: none;
+        border-radius: 4px;
+        position: relative;
+        color: $primary;
+        font-weight: 700;
+        margin: 1.25rem 0;
+    }
+
+    &__publish-icon {
+        position: absolute;
+        left: .75rem;
+        bottom: .5rem;
+    }
+
+    &__cancel {
+        height: 2.5rem;
+        width: 100%;
+        color: $main-highlight;
+        font-weight: 700;
+        border: none;
+        background-color: transparent;
+        margin-bottom: 1.5rem;
+    }
+}

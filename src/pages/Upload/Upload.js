@@ -8,21 +8,23 @@ import thumbnail from '../../assets/images/Upload-video-preview.jpg';
 function Upload() {
 
     return (
-        <main>
-            <h1>Upload Video</h1>
-            <form>
-                <h4>VIDEO THUMBNAIL</h4>
-                <img src={thumbnail} alt="video thumbnail" />
-                <h4>TITLE YOUR VIDEO</h4>
-                <input type="text" placeholder="Add a title to your video"></input>
-                <h4>ADD A VIDEO DESCRIPTION</h4>
-                <textarea placeholder="Add a description to your video"></textarea>
+        <main className="upload">
+            <h1 className="upload__title">Upload Video</h1>
+            <form className="upload__form">
+                <h4 className="upload__thumbnail-title">VIDEO THUMBNAIL</h4>
+                <img className="upload__thumbnail-image" src={thumbnail} alt="video thumbnail" />
+                <h4 className="upload__title-prompt">TITLE YOUR VIDEO</h4>
+                <input className="upload__title-input" type="text" placeholder="Add a title to your video"></input>
+                <h4 className="upload__description-title">ADD A VIDEO DESCRIPTION</h4>
+                <textarea className="upload__description-input" placeholder="Add a description to your video"></textarea>
                 <NavLink to="/">
-                    <button type="submit">PUBLISH</button>
+                    <button className="upload__publish" type="submit">
+                        <img className="upload__publish-icon" src={publish} alt="publish icon" />
+                        PUBLISH
+                    </button>
                 </NavLink>
-                <img src={publish} alt="publish icon" />
             </form>
-            <button>CANCEL</button>
+            <button className="upload__cancel">CANCEL</button>
         </main>
     )
 }

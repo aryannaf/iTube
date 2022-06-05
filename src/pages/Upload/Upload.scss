@@ -7,33 +7,92 @@
 
     &__section {
         margin: 0 1rem;
+
+        @include tablet {
+            margin: 0 2.5rem;
+        }
+
+        @include desktop {
+            margin: 0 8rem;
+        }
     }
 
     &__title {
         font-weight: 700;
         font-size: 1.75rem;
         color: $main-text;
+
+        @include tablet {
+            margin-top: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid $secondary-background;
+            font-size: 2.5rem;
+        }
     }
 
-    &__form {
+    &__inputs {
 
+        @include desktop {
+            display: flex;
+
+        }
+    }
+
+    &__thumbnail {
+
+        @include desktop {
+            width: 50%;
+            margin-right: 2rem;
+        }
     }
 
     &__thumbnail-title {
         font-size: .88rem;
         color: $secondary-highlight;
         margin-bottom: .5rem;
+
+        @include tablet {
+            margin-top: 2rem;
+            font-size: 1rem;
+        }
+
+        @include desktop {
+            margin-top: 0;
+        }
     }
 
     &__thumbnail-image {
         width: 100%;
         border-radius: 4px;
+
+        @include tablet {
+            width: 60%;
+        }
+
+        @include desktop {
+            width: 23rem;
+        }
+    }
+
+    &__form-fields {
+
+        @include desktop {
+            width: 100%;
+        }
     }
 
     &__title-prompt {
         font-size: .88rem;
         color: $secondary-highlight;
         margin-bottom: .5rem;
+
+        @include tablet {
+            font-size: 1rem;
+        }
+
+        @include desktop {
+            margin-top: 0;
+        }
     }
 
     &__title-input {
@@ -42,11 +101,12 @@
         border: 1px solid $secondary-background;
         background-color: $form-field;
         border-radius: 4px;
-        padding-left: .75rem;
+        padding: .5rem 0 .5rem .75rem;
         box-sizing: border-box;
 
         &::placeholder {
             color: $main-text;
+            font-size: 1rem;
         }
     }
 
@@ -54,6 +114,15 @@
         font-size: .88rem;
         color: $secondary-highlight;
         margin-bottom: .5rem;
+
+        @include tablet {
+            font-size: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        @include desktop {
+            margin-top: 2rem;
+        }
     }
 
     &__description-input {
@@ -68,11 +137,36 @@
 
         &::placeholder {
             color: $main-text;
+            font-size: 1rem;
+        }
+
+        @include tablet {
+            height: 6rem;
         }
     }
 
     &__publish-link {
         padding: 0;
+
+        @include tablet {
+            order: 2;
+            width: 25%;
+        }
+
+        @include desktop {
+            width: 17%;
+        }
+    }
+
+    &__buttons {
+
+        @include tablet {
+            margin-top: 1.75rem;
+            border-top: 1px solid $secondary-background;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
 
     &__publish {
@@ -85,12 +179,32 @@
         color: $primary;
         font-weight: 700;
         margin: 1.25rem 0;
+
+        &:hover {
+            background-color: $button-highlight;
+        }
+
+        @include tablet {
+            margin: 2rem 0;
+        }
     }
 
     &__publish-icon {
         position: absolute;
         left: .75rem;
         bottom: .5rem;
+    }
+
+    &__cancel-link {
+        padding: 0;
+
+        @include tablet {
+            width: 30%;
+        }
+
+        @include desktop {
+            width: 22%;
+        }
     }
 
     &__cancel {
@@ -101,5 +215,14 @@
         border: none;
         background-color: transparent;
         margin-bottom: 1.5rem;
+
+        &:hover {
+            color: $button-highlight;
+        }
+
+        @include tablet {
+            order: 1;
+            margin-bottom: 0;
+        }
     }
 }

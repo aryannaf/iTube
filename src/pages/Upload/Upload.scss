@@ -3,7 +3,11 @@
 @use '../../styles/partials/mixins' as *;
 
 .upload {
-    margin: 0 1rem;
+    border-top: 1px solid $secondary-background;
+
+    &__section {
+        margin: 0 1rem;
+    }
 
     &__title {
         font-weight: 700;
@@ -12,7 +16,7 @@
     }
 
     &__form {
-        
+
     }
 
     &__thumbnail-title {
@@ -39,6 +43,7 @@
         background-color: $form-field;
         border-radius: 4px;
         padding-left: .75rem;
+        box-sizing: border-box;
 
         &::placeholder {
             color: $main-text;
@@ -59,10 +64,15 @@
         border-radius: 4px;
         padding-left: .75rem;
         padding-top: .75rem;
+        box-sizing: border-box;
 
         &::placeholder {
             color: $main-text;
         }
+    }
+
+    &__publish-link {
+        padding: 0;
     }
 
     &__publish {

@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <header className="header">
             <div className="header__features">
-                <Link to="/">
+                <Link to="/" className="header__logo-link">
                     <img className="header__logo"
                         src={logo}
                         alt="BrainFlix Logo"
@@ -33,7 +33,7 @@ export default function Header() {
                         src={avatar}
                         alt="profile picture"
                     />
-                    <Link to="/upload">
+                    <Link to="/upload" className="header__upload-link">
                         <button className="header__upload">
                             <img className="header__upload__icon"
                                 src={uploadIcon}

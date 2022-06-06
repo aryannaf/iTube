@@ -3,6 +3,16 @@
 @use '../../styles/partials/mixins' as *;
 
 .video {
+    @include tablet {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        background-color: $detail-background;
+    }
+
+    @include desktop {
+        padding-left: 12.5rem;
+        padding-right: 12.5rem;
+    }
 
     &__display {
         position: relative;
@@ -32,23 +42,55 @@
         display: flex;
         align-items: center;
 
+        @include tablet {
+            padding: .75rem 1rem;
+        }
+
+        @include desktop {
+            padding: 1rem 1rem;
+        }
+
         &--scrub {
             width: 75%;
             margin: 0 .25rem;
+
+            @include tablet {
+                margin: 0 .5rem;
+            }
         }
     }
 
     &__play {
         width: .5rem;
+
+        @include tablet {
+            width: .75rem;
+        }
     }
 
     &__fullscreen {
         width: 1rem;
         margin-right: .75rem;
+
+        @include tablet {
+            width: 1.5rem;
+        }
+
+        @include desktop {
+            width: 1.75rem;
+        }
     }
 
     &__volume {
         width: 1rem;
+
+        @include tablet {
+            width: 1.5rem;
+        }
+
+        @include desktop {
+            width: 1.75rem;
+        }
     }   
 
     &__scrub-bar {
@@ -56,6 +98,16 @@
         height: .1rem;
         background-color: $detail-background;
         border-radius: 4px;
+
+        @include tablet {
+            height: .2rem;
+            width: 86%;
+        }
+
+        @include desktop {
+            height: .3rem;
+            width: 90%;
+        }
     }
 
     &__duration {
@@ -63,5 +115,10 @@
         font-size: .5rem;
         margin-left: .5rem;
         color: $primary;
+
+        @include tablet {
+            font-size: .6rem;
+            margin-left: 1rem;
+        }
     }
 }

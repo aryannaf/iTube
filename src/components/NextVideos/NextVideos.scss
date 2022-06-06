@@ -4,11 +4,22 @@
 
 .next-videos {
     margin: 1rem;
+    margin-bottom: 0;
     color: $secondary-highlight;
+
+    @include tablet {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    @include desktop {
+        margin-left: 2rem;
+        margin-right: 8rem;
+    }
 
     &__title {
         font-size: 1rem;
-        margin: 1.5rem 0;
+        margin: 1.5rem 0 .5rem 0;
     }
 
     &__video-list {
@@ -18,7 +29,6 @@
     &__video {
         display: flex;
         height: 4rem;
-        margin-bottom: 1rem;
     }
     
     &__thumbnail {
@@ -42,11 +52,22 @@
         margin: 0;
         font-size: .81rem;
         color: $main-text;
+
+        @include tablet {
+            font-size: .88rem;
+        }
     }
 
     &__channel {
         font-size: .81rem;
         margin-bottom: .2rem;
         color: $main-text;
+        font-weight: 400;
+
+        @include tablet {
+            font-size: .88rem;
+            margin-bottom: 0;
+            margin-top: .5rem;
+        }
     }
 }

@@ -6,21 +6,47 @@
 
     &__info-section {
         margin: 1rem;
+
+        @include tablet {
+            margin-left: 2.5rem;
+            margin-right: 2.5rem;
+        }
+
+        @include desktop {
+            margin: 0 0 0 8rem;
+            padding-bottom: 3rem;
+            border-right: 1px solid $secondary-background;
+        }
     }
 
     &__title {
         font-weight: 700;
         color: $main-text;
+
+        @include tablet {
+            margin: .5rem 0;
+            font-size: 2rem;
+        }
+
+        @include desktop {
+            padding-top: 1.5rem;
+        }
     }
 
     &__info {
         display: flex;
-        border-top: 1px solid $secondary-highlight;
-        border-bottom: 1px solid $secondary-highlight;
+        border-top: 1px solid $secondary-background;
+        border-bottom: 1px solid $secondary-background;
 
         @include tablet {
             border-top: none;
             justify-content: space-between;
+            align-items: center;
+            padding-bottom: .5rem;
+        }
+
+        @include desktop {
+            padding-right: 2rem;
         }
     }
 
@@ -37,11 +63,20 @@
         font-size: .81rem;
         margin-top: 1rem;
         margin-bottom: 0;
+
+        @include tablet {
+            font-size: .88rem;
+        }
     }
 
     &__date {
         color: $secondary-highlight;
         font-size: .81rem;
+
+        @include tablet {
+            margin-bottom: 0;
+            font-size: .88rem;
+        }
     }
 
     &__stats {
@@ -52,6 +87,7 @@
 
         @include tablet {
             flex-direction: row;
+            margin-bottom: 0;
         }
     }
 
@@ -68,10 +104,25 @@
         color: $secondary-highlight;
         font-size: .81rem;
         margin: 0;
+
+        @include tablet {
+            font-size: .88rem;
+        }
     }
 
     &__description {
         font-size: .81rem;
+        line-height: 1.13rem;
+
+        @include tablet {
+            margin: 1.5rem 0;
+            line-height: 1.38rem;
+            font-size: .88rem;
+        }
+
+        @include desktop {
+            padding-right: 2rem;
+        }
     }
 
     &__comment-count {
@@ -79,6 +130,15 @@
         margin-bottom: 0;
         color: $main-text;
         margin-top: 1.5rem;
+
+        @include tablet {
+            font-size: .88rem;
+        }
+
+        @include desktop {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &__comment-form {
@@ -86,16 +146,45 @@
         margin-top: .5rem;
         justify-content: center;
 
+        @include tablet {
+            margin-bottom: 1.25rem;
+        }
+
+        @include desktop {
+            padding-right: 2rem;
+        }
+
         &__avatar {
             width: 2.25rem;
             height: 2.25rem;
             border-radius: 50%;
             margin-right: 1rem;
             margin-top: 2.25rem;
+
+            @include tablet {
+                margin-right: 1.5rem;
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
 
         &__details {
-            
+            width: 100%;
+
+            @include tablet {
+                display: flex;
+                width: 100%;
+            }
+        }
+
+        &__prompt {
+
+
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
         }
 
         &__title {
@@ -103,6 +192,10 @@
             font-weight: 700;
             margin-bottom: .25rem;
             color: $secondary-highlight;
+
+            @include tablet {
+                font-size: .88rem;
+            }
         }
 
         &__input {
@@ -118,6 +211,11 @@
 
             &::placeholder {
                 color: $main-text;
+            }
+
+            @include tablet {
+                font-size: .88rem;
+                height: 2.5rem;
             }
         }
 
@@ -136,6 +234,13 @@
             &:hover {
                 background-color: $button-highlight;
             }
+
+            @include tablet {
+                width: 40%;
+                margin-left: 1.5rem;
+                align-self: flex-end;
+                margin-bottom: .5rem;
+            }
         }
 
         &__comment-icon {
@@ -146,7 +251,7 @@
     }
 
     &__comments {
-
+        
     }
 
     &__comment {
@@ -156,6 +261,16 @@
 
         &:first-child {
             border-top: 1px solid $secondary-background;
+        }
+
+        &:last-child {
+            @include desktop {
+                border-bottom: none;
+            }
+        }
+
+        @include desktop {
+            padding-right: 2rem;
         }
 
         &__avatar {
@@ -168,6 +283,10 @@
 
         &__info {
             width: 80%;
+
+            @include tablet {
+                width: 100%;
+            }
         }
 
         &__details {
@@ -179,17 +298,31 @@
             font-size: .81rem;
             margin: 0;
             color: $main-text;
+
+            @include tablet {
+                font-size: .88rem;
+            }
         }
 
         &__date {
             margin-top: 0;
             color: $secondary-highlight;
             font-size: .81rem;
+
+            @include tablet {
+                font-size: .88rem;
+            }
         }
 
         &__content {
             font-size: .81rem;
             margin-top: 0;
+            line-height: 1.13rem;
+
+            @include tablet {
+                font-size: .88rem;
+                line-height: 1.38rem;
+            }
         }
     }
 }

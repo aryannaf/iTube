@@ -33,7 +33,7 @@ export default function VideoInfo({ video }) {
 
 
     return (
-        <section className="video">
+        <section className="video-info">
             <div className="video__info-section">
                 <h1 className="video__title">{video.title}</h1>
                 <div className="video__info">
@@ -63,10 +63,12 @@ export default function VideoInfo({ video }) {
                 <div className="video__comment-form">
                     <img className="video__comment-form__avatar" src={avatar} alt="profile picture" />
                     <div className="video__comment-form__details">
-                        <h3 className="video__comment-form__title">JOIN THE CONVERSATION</h3>
-                        <textarea className="video__comment-form__input" placeholder="Add a new comment"
-                        >
-                        </textarea>
+                        <div className="video__comment-form__prompt">
+                            <h3 className="video__comment-form__title">JOIN THE CONVERSATION</h3>
+                            <textarea className="video__comment-form__input" placeholder="Add a new comment"
+                            >
+                            </textarea>
+                        </div>
                         <button className="video__comment-form__submit">
                             <img className="video__comment-form__comment-icon"
                                 src={commentIcon}
@@ -92,7 +94,7 @@ export default function VideoInfo({ video }) {
                     })}
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

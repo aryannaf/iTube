@@ -23,7 +23,7 @@ class Home extends Component {
         axios
             .get(`${API_URL}/videos`)
             .then((response) => {
-                const videoId = this.props.match.params.videoId || response.data[0].id;
+                const videoId = this.props.match.params.id || response.data[0].id;
                 this.setState({
                     currentVideo: videoId,
                     nextVideos: response.data
@@ -31,11 +31,14 @@ class Home extends Component {
 
                 this.getSelectedVideo(videoId);
             })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
     componentDidUpdate(prevProps) {
-        const prevVideoId = prevProps.match.params.videoId;
-        const currentVideoId = this.props.match.params.videoId;
+        const prevVideoId = prevProps.match.params.id;
+        const currentVideoId = this.props.match.params.id;
 
         if (prevVideoId !== currentVideoId) {
             this.getSelectedVideo(currentVideoId);

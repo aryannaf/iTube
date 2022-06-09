@@ -1,6 +1,5 @@
 import './VideoHero.scss';
 import '../../styles/global.scss';
-import '../../data/video-details.json';
 import playButton from '../../assets/images/play.svg';
 import fullscreen from '../../assets/images/fullscreen.svg';
 import volume from '../../assets/images/volume_up.svg';

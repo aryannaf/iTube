@@ -1,6 +1,5 @@
 import './VideoInfo.scss';
 import '../../styles/global.scss';
-import '../../data/video-details.json';
 import views from '../../assets/images/views.svg';
 import likes from '../../assets/images/likes.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';

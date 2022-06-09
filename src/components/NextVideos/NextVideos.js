@@ -1,6 +1,5 @@
 import '../NextVideos/NextVideos.scss';
 import '../../styles/global.scss';
-import '../../data/videos.json';
 import { NavLink } from 'react-router-dom';
 
 export default function NextVideos(props) {
@@ -15,7 +14,7 @@ export default function NextVideos(props) {
             <div className="next-videos__video-list">
                 {nextVideos.map((nextVideo) => {
                     return (
-                        <NavLink to={`/video/${nextVideo.id}`} key={nextVideo.id} >
+                        <NavLink to={`/videos/${nextVideo.id}`} key={nextVideo.id} >
                         <div className="next-videos__video"
                             key={nextVideo.id}
                         >

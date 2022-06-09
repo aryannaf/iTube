@@ -7,8 +7,7 @@ import VideoInfo from '../../components/VideoInfo/VideoInfo';
 import NextVideos from '../../components/NextVideos/NextVideos';
 
 
-const API_URL = "https://project-2-api.herokuapp.com";
-const API_KEY_STRING = "?api_key=c15b9918-67c3-4825-848e-97410116a38a";
+const API_URL = "http://localhost:8080";
 
 
 class Home extends Component {
@@ -22,15 +21,13 @@ class Home extends Component {
 
     componentDidMount() {
         axios
-            .get(`${API_URL}/videos${API_KEY_STRING}`)
+            .get(`${API_URL}/videos`)
             .then((response) => {
                 const videoId = this.props.match.params.videoId || response.data[0].id;
                 this.setState({
                     currentVideo: videoId,
                     nextVideos: response.data
                 })
-
-                
 
                 this.getSelectedVideo(videoId);
             })
@@ -48,7 +45,7 @@ class Home extends Component {
 
     getSelectedVideo = (videoId) => {
         axios
-            .get(`${API_URL}/videos/${videoId}${API_KEY_STRING}`)
+            .get(`${API_URL}/videos/${videoId}`)
             .then((response) => {
                 this.setState({
                     currentVideo: response.data,

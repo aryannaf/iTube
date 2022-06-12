@@ -145,19 +145,6 @@
         }
     }
 
-    &__publish-link {
-        padding: 0;
-
-        @include tablet {
-            order: 2;
-            width: 25%;
-        }
-
-        @include desktop {
-            width: 17%;
-        }
-    }
-
     &__buttons {
 
         @include tablet {
@@ -186,6 +173,12 @@
 
         @include tablet {
             margin: 2rem 0;
+            order: 2;
+            width: 25%;
+        }
+
+        @include desktop {
+            width: 17%;
         }
     }
 

@@ -1,0 +1,50 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.upload-notification {
+    margin: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $button-highlight;
+    border-radius: 4px;
+    align-items: center;
+    height: 14rem;
+    justify-content: center;
+
+    @include tablet {
+        width: 60vw;
+        height: 18rem;
+        margin: auto;
+        margin-top: 4rem;
+    }
+
+    @include desktop {
+        width: 50vw;
+    }
+
+
+    &__title {
+        color: $main-text;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__return-home {
+        background-color: $main-highlight;
+        color: $primary;
+        border: none;
+        border-radius: 4px;
+        height: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+
+        &:hover {
+            background-color: $button-highlight;
+        }
+    }
+}

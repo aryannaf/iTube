@@ -25,7 +25,6 @@ class Home extends Component {
             .then((response) => {
                 const videoId = this.props.match.params.id || response.data[0].id;
                 this.setState({
-                    currentVideo: videoId,
                     nextVideos: response.data
                 })
 
@@ -54,6 +53,9 @@ class Home extends Component {
                     currentVideo: response.data,
 
                 })
+            })
+            .catch(error => {
+                console.log(error);
             })
     }
 

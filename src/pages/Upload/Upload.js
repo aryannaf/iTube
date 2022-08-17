@@ -31,7 +31,6 @@ class Upload extends Component {
             })
 
             axios.post(`${API_URL}/videos`, { id, title, description });
-            this.history.push('/');
         }
         else {
             alert("Upload unsuccessful - please try again");

@@ -1,7 +1,7 @@
 import '../Header/Header.scss';
 import '../../styles/global.scss';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/BrainFlix-logo.svg';
+import logo from '../../assets/images/iTube.png';
 import searchIcon from '../../assets/images/search.svg';
 import uploadIcon from '../../assets/images/upload.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
